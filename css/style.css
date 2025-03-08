@@ -22,8 +22,15 @@ body {
 .title {
     text-align: center;
     color: #E75480;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 28px;
+}
+
+.author-info {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
 }
 
 /* 卡片生成器布局 */
@@ -196,6 +203,8 @@ body {
 .theme-item[data-theme="forest"] { background-color: #0F9B8E; }
 .theme-item[data-theme="gradient"] { background-color: #FF7BAC; }
 .theme-item[data-theme="elegant"] { background-color: #9575CD; }
+.theme-item[data-theme="sunset"] { background-color: #FF5252; }
+.theme-item[data-theme="lavender"] { background-color: #9C27B0; }
 
 /* 按钮样式 */
 .btn-generate, .btn-download {
@@ -221,7 +230,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .card-preview {
