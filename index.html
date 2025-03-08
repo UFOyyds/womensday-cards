@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>女神节祝福卡片生成器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">女神节祝福卡片生成器</h1>
+        
+        <div class="card-generator">
+            <!-- 左侧表单 -->
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="cardTitle">致：</label>
+                    <input type="text" id="cardTitle" placeholder="请输入收件人姓名或称呼">
+                </div>
+                
+                <div class="form-group">
+                    <label>头像照片</label>
+                    <div class="avatar-upload">
+                        <div class="avatar-container">
+                            <div class="avatar-preview">
+                                <div id="avatarPreview" style="background-image: url('assets/cat.jpg');"></div>
+                            </div>
+                        </div>
+                        <div class="avatar-edit">
+                            <input type="file" id="avatarUpload" accept=".png, .jpg, .jpeg">
+                            <label for="avatarUpload">点击上传头像</label>
+                            <button id="resetAvatar" class="btn-reset-avatar">恢复默认头像</button>
+                        </div>
+                        <p class="avatar-tip">点击上传或更换照片</p>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">祝福语</label>
+                    <textarea id="message" rows="4" placeholder="选择主题后会自动生成祝福语，您也可以自行编辑"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sender">署名</label>
+                    <input type="text" id="sender" placeholder="输入署名">
+                </div>
+                
+                <div class="form-group">
+                    <label>选择主题风格</label>
+                    <div class="theme-grid">
+                        <div class="theme-item" data-theme="spring" data-color="#8BC34A">
+                            <span>春日清新</span>
+                        </div>
+                        <div class="theme-item" data-theme="art" data-color="#FF9800">
+                            <span>艺术风格</span>
+                        </div>
+                        <div class="theme-item" data-theme="ocean" data-color="#5386E4">
+                            <span>海洋神秘</span>
+                        </div>
+                        <div class="theme-item" data-theme="warm" data-color="#D2876E">
+                            <span>暖流风格</span>
+                        </div>
+                        <div class="theme-item" data-theme="tech" data-color="#00BCD4">
+                            <span>未来科技</span>
+                        </div>
+                        <div class="theme-item" data-theme="vintage" data-color="#A79B8E">
+                            <span>复古典雅</span>
+                        </div>
+                        <div class="theme-item" data-theme="shine" data-color="#5D6CC6">
+                            <span>光芒未来</span>
+                        </div>
+                        <div class="theme-item" data-theme="forest" data-color="#0F9B8E">
+                            <span>森林绿意</span>
+                        </div>
+                        <div class="theme-item" data-theme="gradient" data-color="#FF7BAC">
+                            <span>梦幻渐变</span>
+                        </div>
+                        <div class="theme-item" data-theme="elegant" data-color="#9575CD">
+                            <span>优雅、线条</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button id="downloadCard" class="btn-download">下载卡片</button>
+                </div>
+            </div>
+            
+            <!-- 右侧预览 -->
+            <div class="preview-section">
+                <h3>卡片预览</h3>
+                <div class="card-preview-container">
+                    <div id="cardPreview" class="card-preview">
+                        <div class="card-content">
+                            <div class="card-avatar">
+                                <img id="previewAvatar" src="assets/cat.jpg" alt="头像">
+                            </div>
+                            <h2 id="previewTitle">致：亲爱的朋友</h2>
+                            <p id="previewMessage">祝福语会显示在这里</p>
+                            <div class="card-footer">
+                                <span id="previewSender">署名</span>
+                                <span id="previewDate">2025年3月8日</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 脚本 -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
